@@ -38,7 +38,7 @@ then
     # Read all attachments, exit if none present
     attachments=($(task rc.defaultwidth=0 "$1" information\
         | tr -d "'"\
-        | awk '$3 == "Annotation" && $5 == "Attachment:" { print $5 }'\
+        | awk '$3 == "Annotation" && $5 == "Attachment:" { print $6 }'\
         | sort -u))
     if [ ${#attachments[@]} -eq 0 ]
     then
