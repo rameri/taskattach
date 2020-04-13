@@ -19,7 +19,7 @@ then
 fi
 
 # Get UUID of the task
-uuid=$(task "$1" uuid)
+uuid=$(task "$1" uuids)
 if [ -z "$uuid" ]
 then
     echo "Task with given id does not exist: $1"
